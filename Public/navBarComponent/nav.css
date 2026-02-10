@@ -1,0 +1,114 @@
+:root {
+   --palatinate: #463ACC;
+   --royal-blue:  #5275DC;
+   --gunmetal: #243840;
+   --non-photo: #90E0EF;
+   --light-cyan: #C0F0F8;
+   --nav-height: 50px;
+ }
+
+.averia-text {
+   font-family: "Averia Sans Libre", serif;
+   font-weight: 600;
+   font-style: normal;
+ }
+
+.active-page {
+   text-decoration: overline;
+   color: var(--royal-blue);
+}
+
+.inactive-page {
+   text-decoration: none;
+   color: var(--gunmetal);
+}
+
+.links {
+   display: flex;
+   flex-direction: row;
+}
+
+.logo-img {
+   height: 45px;
+   margin: 0 20px 0 20px;
+}
+
+.navbar {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background-color: var(--non-photo);
+   padding: 15px 20px;
+   width: 100%;
+   font-size: 18px;
+   height: var(--nav-height);
+   box-shadow: 0 3px 4px 0 rgba(0, 0, 0, .3);
+ }
+ 
+.navbar nav a {
+   margin: 0 20px;
+}
+
+.logout {
+   background-color: var(--palatinate);
+   color: white;
+   padding: 8px 15px;
+   border: none;
+   border-radius: 25px;
+   margin: 0 40px 0 20px;
+   font-size: 18px;
+   width: 100px;
+   height: 25px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   cursor: pointer;
+   text-decoration: none;
+}
+
+.hamburger {
+   display: none; 
+ }
+
+@media (max-width: 768px) {
+   .navbar {
+     flex-direction: column;
+     align-items: flex-start;
+     height: auto;
+     padding: 10px 15px;
+   }
+ 
+   .logo-img {
+     margin-bottom: 10px;
+   }
+ 
+   .links {
+     flex-direction: column;
+     width: 100%;
+   }
+ 
+   .navbar nav a {
+     margin: 10px 0;
+     width: 100%;
+   }
+ 
+   .logout {
+     margin: 10px 0 0 0;
+     width: 100%;
+     justify-content: flex-start;
+   }
+ 
+   .hamburger {
+      display: block; 
+      cursor: pointer;
+      background: none;
+      border: none;
+      font-size: 24px;
+      margin-right: auto;
+      color: var(--gunmetal);
+    }
+ 
+   .links.hidden {
+     display: none;
+   }
+ }

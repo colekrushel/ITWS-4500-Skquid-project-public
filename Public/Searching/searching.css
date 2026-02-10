@@ -1,0 +1,210 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    background: var(--light-cyan);
+}
+
+.averia-text {
+    font-family: "Averia Sans Libre", serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.fustat-text {
+    font-family: "Fustat", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+}
+
+.webName {
+    color: black;
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0;
+}
+
+.search-container {
+    text-align: center;
+    margin-top: 40px;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+    padding-top: 60px;
+    padding-bottom: 200px;
+    overflow: hidden;
+}
+
+.search-title {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: var(--palatinate);
+}
+
+.search-input {
+    pointer-events: auto; 
+    user-select: auto; 
+    caret-color: black;
+    width: 80%;
+    padding: 15px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    outline: none;
+    text-align: center;
+    background: white;
+    color: black;
+    transition: border-color 0.3s;
+}
+
+.search-input:focus {
+    border-color: var(--palatinate);
+    outline: none;
+}
+
+.search-results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.search-item {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 60%;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.search-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 4px 6px 15px rgba(0,0,0,0.15);
+}
+
+.back-button,
+.view-details-button,
+.friend-button, 
+.add-event-button {
+    background-color: var(--palatinate);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 10px 8px 0 0;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.back-button:hover,
+.view-details-button:hover,
+.friend-button:hover,
+.add-event-button:hover {
+    background-color: #3A3A7F;
+    transform: translateY(-2px);
+    box-shadow: 4px 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.back-button {
+    margin-right: 10px;
+}
+
+.waveClass {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 85vh; 
+    z-index: -1;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.waveClass svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 768px) {
+    body {
+        display: block;
+    }
+
+    .mobile-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: calc(100vh - 120px); 
+        padding-top: 20px;
+        padding-bottom: 40px;
+    }
+
+    .search-container {
+        margin-top: 80px;
+        width: 100%;
+        max-width: 600px;
+        padding: 30px 20px 80px 20px;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+    }
+
+    .search-title {
+        font-size: 2em;
+    }
+
+    .search-input {
+        width: 100%;
+        max-width: 100%;
+        padding: 15px;
+        font-size: 1.1rem;
+        box-sizing: border-box;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .search-item {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .back-button,
+    .view-details-button,
+    .friend-button,
+    .add-event-button {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .waveClass {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100vw; 
+        height: 85vh;
+        z-index: -1;
+        pointer-events: none;
+        overflow: hidden;
+    }    
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}

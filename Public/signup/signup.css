@@ -1,0 +1,156 @@
+:root {
+   --palatinate: #463ACC;
+   --royal-blue:  #5275DC;
+   --gunmetal: #243840;
+   --non-photo: #90E0EF;
+   --light-cyan: #C0F0F8;
+   --nav-height: 50px;
+}
+
+body {
+   background-color: var(--light-cyan);
+   margin: 0;
+   overflow: hidden;
+   font-family: "Fustat", serif;
+   font-optical-sizing: auto;
+   font-weight: 600;
+}
+
+.signup-btn {
+   background: #463ACC;
+   color: white;
+   font-weight: bold;
+   margin-top: 10px;
+   padding: 12px 24px;
+   border-radius: 20px;
+   border: none;
+   cursor: pointer;
+   font-size: 16px;
+   transition: all 0.3s ease-in-out;
+}
+
+.signup-btn:hover {
+   background: #463ACC;
+   transform: scale(1.05);
+}
+
+.signup-form input,
+.signup-form textarea {
+  font-family: "Fustat", serif;
+  color: var(--gunmetal);
+  font-weight: 800;
+  display: block;
+  width: 85%;
+  padding: 10px;
+  margin: 0;
+  border: 1.5px solid var(--gunmetal);
+  border-radius: 5px;
+  resize: none;
+  font-size: 15px;
+  background-color: rgba(0, 154, 255, .15);
+  outline: none;
+}
+
+.signup-form textarea {
+  height: 160px;
+  font-size: 13px;
+}
+
+.signup-form input:focus,
+.signup-form textarea:focus {
+  background-color: rgba(0, 0, 255, 0.1);
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.signup-container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   width: 40vw; /* Increased width */
+   padding: 30px; /* More padding for better spacing */
+   border-radius: 12px;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   background: white;
+   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow */
+}
+
+.signup-form input {
+   width: 100%;
+   font-size: 18px;
+   padding: 15px;
+   margin-bottom: 20px;
+}
+
+.signup-btn {
+   font-size: 18px; /* Bigger button text */
+   padding: 14px 28px; /* Larger button */
+   border-radius: 25px; /* Slightly rounder button */
+}
+
+.log-btn {
+   background: #463ACC;
+   color: white;
+   position: fixed;
+   bottom: 20px;
+   right: 20px;
+   font-weight: bold;
+   padding: 16px 32px;
+   border-radius: 25px;
+   border: none;
+   cursor: pointer;
+   font-size: 20px;
+}
+
+.log-btn:hover {
+   background: #463ACC;
+   transform: scale(1.05);
+}
+
+.validation-message {
+   font-size: 0.9rem;
+   color: red;
+   margin-top: 8px;
+}
+
+@media (max-width: 768px) {
+    .signup-container {
+      width: 90vw;
+      padding: 20px;
+      top: 45%;
+      transform: translate(-50%, -45%);
+    }
+  
+    .signup-form input {
+      font-size: 16px;
+      padding: 12px;
+      margin-bottom: 15px;
+    }
+  
+    .signup-btn {
+      font-size: 16px;
+      padding: 12px 24px;
+      width: 100%;
+    }
+  
+    .log-btn {
+      bottom: 10px;
+      right: 10px;
+      font-size: 16px;
+      padding: 12px 20px;
+    }
+  
+    .validation-message {
+      font-size: 0.8rem;
+    }
+  }
+  

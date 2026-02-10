@@ -1,0 +1,31 @@
+
+[
+{
+   "secretID": "someGeneratedString",
+   "userId": 0,
+   "username": "John Smith",
+   "skills": [{"skill": "JS", "description": "Javascript programming"}, {"skill": "skill2", "description": "desc2"}],
+   "location": "Troy, NY",
+   "bio": "I'm just a chill guy who doesn't give a fuck",
+   "status": "Big chilling",
+   "friends": [1, 2],
+   "messages": [{"sender": 0, "target": 1, "body": "hey joe this is john"}, {"sender": 1, "target": 0, "body": "what up john"}],
+   "events_created": [1],
+   "events_matched": [2, 5],
+   "role": "user"
+},
+{
+   "secretID": "someGeneratedString",
+   "userId": 1,
+   "username": "Joe Pizza",
+   "skills": [{"skill": "Chef", "description": "I cooka da pizza"}, {"skill": "skill2", "description": "desc2"}],
+   "location": "NYC, NY",
+   "bio": "big pizza guy",
+   "status": "eating pizza",
+   "friends": [0],
+   "messages": [{"sender": 0, "target": 1, "body": "hey joe this is john"}, {"sender": 1, "target": 0, "body": "what up john"}, {"sender": 1, "target": 2, "body": "heeeeelp"}],
+   "events_created": [2],
+   "events_matched": [1, 5],
+   "role": "user"
+}
+]

@@ -1,0 +1,578 @@
+* {
+  margin: 0;
+  padding: 0;
+  
+}
+
+body {
+  font-family: 'Averia Sans Libre', Arial, sans-serif;
+  background-color: var(--gunmetal);
+  color: white;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.flexBox {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--gunmetal);
+  margin: 0;
+}
+
+.leftSide {
+  flex: 0 0 65%;
+  min-height: 100vh;
+  padding: 1em;
+  border-right: 4px solid black;
+  overflow-y: auto;
+}
+
+.rightSide {
+  flex: 0 0 28%;
+  min-height: 100vh;
+  padding: 1em;
+  overflow-y: auto;
+}
+
+.leftContent {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background-color: var(--gunmetal);
+}
+
+.leftContentTitle {
+  text-align: center;
+  margin: 2em 0 1em;
+}
+
+#titleText {
+  color: white;
+  font-size: 4em;
+}
+
+.eventDisplaySHP{
+  margin-right: 0.3em;
+}
+
+
+.eventAddButton{
+  margin-left: auto;
+  padding: 0.6em;
+  border-radius: 25px;
+  width: 8em;
+  border: 1px solid;
+  border-color: black;
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.eventAddButton:hover{
+  transform: translateY(-5px);
+}
+
+.addFriendButton{
+  width: 100%;
+  height: 100%;
+  filter: invert(1);
+  border-radius: 25px;
+}
+
+.addRmvFriend{
+  display: flex;
+  gap: 0.8em;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 1em; 
+  margin-left: auto;
+}
+
+.rightContent{
+  height: 40%;
+  margin-bottom: 3em;
+  overflow-y: auto;
+}
+
+.skillsCard{
+  display: flex;
+  align-items: center;
+  padding: 1em;
+  margin: 1em 0;
+  background-color: var(--royal-blue);
+  border-radius: 12px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.movingImage {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  left: 30%;
+  transition: transform 0.6s ease-out, left 0.8s ease-in-out;
+  cursor: pointer;
+}
+
+.movingImage:hover {
+  transform: rotate(-20deg);
+}
+
+.movingImage.onLeft {
+  left: -35%;
+}
+
+.movingImage.onLeft:hover {
+  transform: rotate(20deg);
+}
+
+.varyContent {
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 1em;
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  margin: 0 auto; 
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px black;
+  background-color: var(--royal-blue);
+}
+
+#commonInterestsDiv {
+  margin: 1em;
+}
+
+#commonInterestsTitle {
+  text-align: center;
+  padding: 1em;
+  margin: 1em 0;
+  background-color: var(--royal-blue);
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px black;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#noEventsText{
+  text-align: center;
+  padding: 1em;
+  margin: 1em 0;
+  background-color: var(--royal-blue);
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px black;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#listCommonInterests {
+  background-color: var(--light-cyan);
+  padding: 0.5em;
+  width: 80%;
+  border-radius: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0px 4px 10px black;
+}
+
+.friendCard {
+  display: flex;
+  align-items: center;
+  padding: 1em;
+  margin: 1em 0;
+  background-color: var(--royal-blue);
+  border-radius: 12px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.friendPfp {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 3px solid white;
+  margin-right: 1em;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.friendPfp:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px black;
+}
+
+.friendName {
+  color: white;
+  font-size: 1.2em;
+  flex-grow: 1;
+}
+
+.chatBubble {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--palatinate);
+  border-radius: 50%;
+  padding: 0.2em;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.chatBubble:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px black;
+}
+
+.bi-chat-fill {
+  color: var(--white);
+  font-size: 30px;
+}
+
+.formContainer {
+  max-width: 500px;
+  margin: auto;
+  padding: 1em;
+  padding-right: 2.1em;
+  border-radius: 12px;
+  background-color: var(--palatinate);
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.formGroup {
+  margin-bottom: 1rem;
+}
+
+.formInput {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.25rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.submitBtn {
+  margin-left: 35%;
+  background-color: var(--royal-blue);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: "Fustat", serif;
+}
+
+#addEventTitle{
+  text-align: center;
+  padding: 1em;
+  margin: 1em 0;
+  background-color: var(--royal-blue);
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px black;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bi-check2 {
+  font-size: 32px;
+  padding-top: 3px;
+}
+
+.bi-x-lg {
+  font-size: 24px;
+}
+
+.friendOption {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--palatinate);
+  border-radius: 50%;
+  padding: 0.2em;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.notif-text {
+  margin: 0;
+  color: var(--palatinate);
+}
+
+.notif-icon {
+  color: var(--palatinate);
+}
+
+.banner-notif {
+  display: none;
+  position: fixed;
+  top: 50px;
+  left: 40vw;
+  z-index: 999;
+  background-color: white;
+  border-radius: 5px;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  color: var(--palatinate);
+  font-family: "Fustat", serif; 
+  padding: 10px 15px;
+  font-weight: 800; 
+}
+
+.notif-animation {
+  animation: notif-animate 1.5s ease forwards;
+}
+
+@keyframes notif-animate {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  90% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+.bi-cal {
+  padding-right: 5px;
+}
+
+.modalDiv {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  color:black;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+}
+
+.modal-close-button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background: #6200ea;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/** Mobile View Stuff **/
+@media (max-width: 768px) {
+  .flexBox {
+    flex-direction: column;
+  }
+  
+  .leftSide {
+    flex: 1 0 100%;
+    width: 100%;
+    border-right: none;
+    padding: 0.5em;
+  }
+
+  .rightSide {
+    flex: 1 0 100%;
+    width: 100%;
+    border-right: none;
+    padding: 0.5em;
+  }
+  
+  .leftSide {
+    border-bottom: 4px solid black;
+  }
+  
+  #titleText {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+  }
+  
+  .varyContent {
+    font-size: 1.2em;
+    max-width: 90%;
+  }
+  
+  .movingImage {
+    width: 100px;
+    height: 100px;
+    left: 25%;
+  }
+  
+  .movingImage {
+    left: -25%;
+  }
+
+  .onLeft{
+    left: -25%;
+  }
+  
+  .skillsCard {
+    flex-direction: column;
+    text-align: center;
+    padding: 0.8em;
+  }
+
+  .friendCard{
+    flex-direction: column;
+    text-align: center;
+    padding: 0.8em;
+  }
+  
+  .buttonContainer {
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    gap: 0.5em;
+  }
+  
+  .eventAddButton {
+    width: 100%;
+    margin: 0.2em 0;
+  }
+  
+  .formContainer {
+    padding: 1em;
+    max-width: 100%;
+  }
+  
+  .submitBtn {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    display: block;
+  }
+  
+  .friendPfp {
+    margin-right: 0;
+    margin-bottom: 0.5em;
+  }
+  
+  .friendName {
+    margin-bottom: 0.5em;
+  }
+  
+  .chatBubble {
+    margin: 0.2em;
+  }
+
+  .friendOption{
+    margin: 0.2em;
+  }
+  
+  #commonInterestsTitle {
+    width: 90%;
+    padding: 0.7em;
+  }
+
+  #addEventTitle{
+    width: 90%;
+    padding: 0.7em;
+  }
+
+  #noEventsText{
+    width: 90%;
+    padding: 0.7em;
+  }
+  
+  #listCommonInterests {
+    width: 90%;
+  }
+  
+  .modalContent {
+    width: 95%;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  #titleText {
+    font-size: 2em;
+  }
+  
+  .leftContentTitle {
+    margin: 1em 0 0.5em;
+  }
+  
+  .formGroup label {
+    font-size: 0.9em;
+  }
+  
+  .formInput {
+    padding: 0.4rem;
+  }
+  
+  .banner-notif {
+    left: 5vw;
+    width: 90vw;
+    text-align: center;
+  }
+  
+  .addRmvFriend {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .skillsCard {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .friendCard{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .varyContent {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    padding: 0.5em;
+  }
+  
+  .logo-container {
+    margin-bottom: 0.5em;
+  }
+  
+  .nav-links {
+    width: 100%;
+    justify-content: space-around;
+  }
+  
+  .nav-link {
+    padding: 0.3em;
+    font-size: 0.9em;
+  }
+}

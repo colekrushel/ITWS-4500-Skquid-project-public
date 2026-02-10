@@ -1,0 +1,15 @@
+{
+  "userId": 9,
+  "friendsList": [
+    {
+      "userId": 4,
+      "name": "Jared George",
+      "pfp": "../resources/usericon.png"
+    },
+    {
+      "userId": 5,
+      "name": "John Doe",
+      "pfp": "../resources/usericon.png"
+    }
+  ]
+}

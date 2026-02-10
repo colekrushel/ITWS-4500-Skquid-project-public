@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Messages</title>
+    <link rel="stylesheet" href="./messagingStyling.css">
+    <link rel="stylesheet" href="./mobileStyling.css">
+    <link rel="stylesheet" href="./components/MessageWindow.css">
+    <link rel="stylesheet" href="./components/AddUserWindow.css">
+    <link rel="stylesheet" href="../navBarComponent/nav.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Averia+Sans+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Fustat:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../Resources/Skquid.ico" type="image/x-icon">
+    <script src="messaging.js" type="module"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Averia+Sans+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Fustat:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="shortcut icon" href="../resources/Skquid.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+  </head>
+  <body>
+   <div id="nav-root">
+
+   </div>
+   <main>
+      <div id="windowRoot"></div>
+      <div id="UWRoot"></div>
+      <div id="userList">
+
+      </div>
+      <div id="chatDiv">
+         <h3 id="chatTitle"></h3>
+         <button id="backButton">&#8592;</button>
+         <div id="messages">
+
+         </div>
+         <form class="chat-input">
+            <input type="text" placeholder="Type your message..." id="message-input">
+            <button type="button" id="sendMessage">Send</button>
+        </form>
+
+         
+      </div>
+   </main>
+    
+
+    <!-- Load React. -->
+    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+    <!-- Load your React component. -->
+   <!-- <script src="userSelect.js"></script> -->
+    
+
+  </body>
+</html>

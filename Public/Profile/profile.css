@@ -1,0 +1,727 @@
+:root {
+  --palatinate: #463ACC;
+  --royal-blue:  #5275DC;
+  --gunmetal: #243840;
+  --non-photo: #90E0EF;
+  --light-cyan: #C0F0F8;
+  --nav-height: 50px;
+}
+
+body {
+  font-family: "Fustat", serif;
+  background-color: var(--light-cyan);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: auto; 
+  max-width: 100vw;
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.profile-fields {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  width: 30vw;
+}
+
+.avatar-section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.avatar {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 7px solid var(--palatinate);
+}
+
+.username {
+  font-size: 30px;
+  margin-top: 10px;
+  font-weight: bold;
+  color: var(--palatinate);
+}
+
+.edit-form input,
+.edit-form textarea {
+  font-family: "Fustat", serif;
+  color: var(--gunmetal);
+  font-weight: 600;
+  display: block;
+  width: 85%;
+  padding: 10px;
+  margin: 0;
+  border: 1.5px solid var(--royal-blue);
+  border-radius: 5px;
+  resize: none;
+  font-size: 13px;
+  background-color: transparent;
+  outline: none;
+  letter-spacing: 1.05px;
+}
+
+.edit-form textarea {
+  height: 160px;
+  font-size: 13px;
+}
+
+.edit-form input:focus,
+.edit-form textarea:focus {
+  background-color: rgba(0, 0, 255, 0.1);
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.edit-form button {
+  background-color: var(--palatinate);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.skills-section {
+  background-color: var(--palatinate);
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 20px;
+  width: 32vw;
+  height: 77vh;
+  text-align: center;
+}
+
+.skill-tag {
+  background-color: var(--non-photo);
+  color: var(--gunmetal);
+  padding: 5px 10px;
+  border-radius: 15px;
+  margin: 5px;
+  display: inline-flex;
+  font-weight: 600;
+  height: 20px;
+  vertical-align: middle;
+  gap: 4px;
+  cursor: default;
+  box-shadow: 2px 3px 4px 2px rgba(0, 0, 0, .3);
+}
+
+.add-skill {
+  cursor: pointer;
+}
+
+.averia-text {
+  font-family: "Averia Sans Libre", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.fustat-text {
+  font-family: "Fustat", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.profile-edit-content {
+  display: flex;
+  flex-direction: row;
+  height: calc(90vh - var(--nav-height));
+  align-items: center;
+}
+
+button {
+  cursor: pointer;
+}
+
+.avatar-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.page-heading {
+  text-align: center;
+  width: 75%;
+}
+
+.form-label {
+  margin: 0;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  font-weight: 800;
+  color: var(--royal-blue)
+}
+
+.profile-field-labelset {
+  display: flex;
+  flex-direction: column;
+  margin: 5px 0 5px 40px;
+  width: 100%;
+}
+
+#edit-profile-button {
+  margin-top: 10px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, var(--palatinate), var(--royal-blue));
+}
+
+#edit-profile-heading {
+  margin: 0 0 5px 0;
+  color: var(--gunmetal);
+}
+
+.profile-card {
+  position: relative;
+  background-color: var(--non-photo);
+  color: var(--palatinate);
+  padding: 1.5% 3%;
+  border-radius: 10px;
+  margin-top: 20px;
+  width: 60vw;
+  height: 75vh;
+  text-align: center;
+  box-shadow: 2px 3px 4px 2px rgba(0, 0, 0, .3);
+}
+
+.upper-card {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1.5px solid var(--royal-blue);
+  padding-bottom: 1%;
+}
+
+.lower-card {
+  margin: 2.5% 2.5% 0 2.5%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.avatar-side, .info-side {
+  display: flex;
+  flex-direction: column;
+  margin: 5% 0 2% 5%;
+}
+
+.profile-avatar {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 6px solid var(--palatinate);
+}
+
+.profile-username {
+  font-size: 25px;
+  margin-top: 10px;
+  font-weight: bold;
+  color: var(--palatinate);
+  cursor: default;
+}
+
+.avatar-side {
+  align-items: center;
+}
+
+.profile-name {
+  color: var(--palatinate);
+  font-size: 32px;
+  font-weight: 800;
+  margin: 15px 0 2.5px 0;
+  cursor: default;
+}
+
+.profile-location {
+  color: var(--gunmetal);
+  font-weight: 800;
+  font-size: 24px;
+  margin: 0 0;
+  word-wrap: none;
+  overflow: hidden;
+  cursor: default;
+}
+
+.profile-status {
+  color: var(--royal-blue);
+  max-width: 100%;
+  font-weight: 800;
+  font-size: 19px;
+  text-align: left;
+  margin: 0 0;
+  overflow: hidden;
+  white-space: initial;
+  cursor: default;
+}
+
+.info-side {
+  align-items: start;
+}
+
+.profile-btn {
+  border: none;
+  background: var(--palatinate);
+  border-radius: 4px;
+  color: white;
+  width: 50%;
+  font-size: 16px;
+  margin-top: 10px;
+  height: 40px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  gap: 6px;
+  padding: 8px;
+}
+
+.profile-bio {
+  text-align: left;
+  color: var(--gunmetal);
+  margin: 8px 0 0 0;
+  width: 375px;
+  overflow-wrap: break-word;
+  overflow-y: hidden;
+  cursor: default;
+  max-height: 215px;
+}
+
+.profile-skill {
+  background-color: var(--royal-blue);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 15px;
+  margin: 5px;
+  display: inline-block;
+  font-weight: 600;
+  height: 20px;
+  cursor: default;
+}
+
+.bi-person-plus-fill {
+  margin-right: 6px;
+}
+
+.bi-pencil {
+  margin-right: 6px;
+  text-shadow: 0.3px 0.3px 0 white;
+}
+
+.no-skills {
+  color: var(--royal-blue);
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 5px;
+  letter-spacing: 1.25px;
+}
+
+#search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#skills-search-input::placeholder {
+  font-family: "Fustat", serif;
+  color: var(--gunmetal);
+  letter-spacing: 1.1px;
+  font-size: 14px;
+}
+
+.edit-skill-heading {
+  margin: 0;
+}
+
+.skill-li {
+  cursor: pointer;
+  width: 340px;
+  color: white;
+  letter-spacing: 1.1px;
+  font-size: 13px;
+  font-weight: 600;
+  list-style-type: none;
+  background: var(--royal-blue);
+  margin: 2px 0 2px -40px;
+  border-radius: 5px;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 3px 4px 2px rgba(0, 0, 0, .3);
+}
+
+.skill-li:hover {
+  font-weight: 800;
+  scale: 1.1;
+}
+
+#skills-search-input {
+  margin: 0;
+  background: none;
+  border: none;
+  outline: none;
+  color: var(--gunmetal); 
+  letter-spacing: 1.1px;
+  font-size: 14px;
+  font-weight: 500;
+  width: 90%;
+}
+
+#skills-searchbar {
+  width: 80%;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  height: 25px;
+  padding: 4px;
+  padding-left: 12px;
+  margin: 8px 0 0 0;
+  box-shadow: 2px 3px 4px 2px rgba(0, 0, 0, .3);
+}
+
+#skills-search-results {
+  margin: -2px 0 0 0;
+}
+
+.add-skill {
+  margin-left: 6px;
+  color: var(--non-photo);
+  font-size: 20px;
+  font-weight: 800;
+}
+
+i.bi.bi-search {
+  padding: 3px 8px 0 1px;
+  font-size: 13px;
+  color: var(--gunmetal)
+}
+
+#your-skill-display {
+  margin-top: 5px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.loc-horizontal {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: -10px;
+  margin-bottom: 2px;
+}
+
+.bi-geo-alt-fill {
+  margin-right: 5px;
+  color: var(--gunmetal);
+}
+
+.skill-tag-text {
+  margin: 0;
+}
+
+.bi-x {
+  color:var(--gunmetal);
+  vertical-align: middle;
+  scale: 1.1;
+  cursor: pointer;
+}
+
+#edit-profile-button:hover {
+  background: var(--palatinate);
+}
+
+.profile-btn:hover, #share-profile-btn:hover {
+  background: #4E4DE4;
+}
+
+.profile-buttons {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  width: 325px;
+}
+
+#exchange-text {
+  font-size: 15.5px;
+}
+
+.bi-prof-btn {
+  font-size: 18px;
+}
+
+#edit-btn {
+  padding: 0;
+  font-size: 17px;
+}
+
+#requested-text {
+  font-size: 14px;
+}
+
+#friend-btn:hover {
+  color: rgb(134, 251, 134);
+}
+
+#unfriend-btn:hover {
+  color: rgb(251, 122, 122);
+}
+
+#friend-count-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 75px;
+  right: 48px;
+}
+
+#friend-count-label {
+  margin: -6px 0 0 0;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#friend-count-text {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+#share-profile-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 14px;
+  border-radius: 5px;
+  padding: 6px 12px;
+  cursor: pointer;
+  background: var(--palatinate);
+  color: white;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  line-height: 1.2;
+  border: none;
+  font-family: "Averia Sans Libre", serif;
+  font-weight: 600;
+  letter-spacing: 1.1px;
+  gap: 4px;
+  outline: none;
+}
+
+.share-text {
+  margin: 0;
+}
+
+#friends-modal, #skills-modal {
+  outline: none;
+  width: 600px;
+  height: 575px;
+  border-radius: 10px;
+  border: none;
+}
+
+#friends-modal::backdrop, #skills-modal::backdrop {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+}
+
+.friends-list-header, .skills-list-header {
+  margin-left: 20px;
+}
+
+#friends-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow-y: auto;
+}
+
+.friend-record {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  padding-left: 20px;
+
+}
+
+.friend-list-pfp {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.friend-identifiers {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5px;
+}
+
+.friend-un {
+  text-decoration: none;
+  font-weight: 800;
+  color: var(--gunmetal);
+  outline: none;
+}
+
+.friend-name {
+  color: var(--gunmetal);
+  cursor: default;
+  margin: 0;
+}
+
+.extra-skills {
+  cursor: pointer;
+}
+
+#skills-list-container {
+  overflow-y: auto;
+  width: 90%;
+  padding-left: 5%;
+}
+
+#windowRoot {
+  display: none;
+}
+
+@media screen and (max-width: 480px) {
+  .profile-edit-content {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 10px;
+  }
+
+  .profile-fields {
+    width: 90vw;
+    padding: 10px;
+    margin-top: 10px;
+  }
+
+  .avatar {
+    width: 150px;
+    height: 150px;
+  }
+
+  .username {
+    font-size: 20px;
+  }
+
+  .profile-btn {
+    width: 80%;
+    font-size: 14px;
+  }
+
+  .page-heading {
+    width: 100%;
+    font-size: 20px;
+  }
+
+  .edit-form input,
+  .edit-form textarea {
+    width: 100%;
+    font-size: 12px;
+  }
+
+  .profile-bio {
+    width: 90%;
+    font-size: 14px;
+  }
+
+  .profile-card {
+    width: 90vw;
+    height: auto;
+    padding: 4% 5%;
+  }
+
+  .upper-card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-avatar {
+    width: 150px;
+    height: 150px;
+  }
+
+  #share-profile-btn {
+    top: 10px;
+    right: 10px;
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+
+  #friend-count-display {
+    top: 60px;
+    right: 20px;
+  }
+
+  .profile-location, .profile-status {
+    font-size: 16px;
+  }
+
+  .profile-name {
+    font-size: 24px;
+  }
+
+  .skills-section {
+    width: 100%;
+    height: auto;
+    min-height: 250px;
+    padding: 12px;
+    box-sizing: border-box;
+  }
+
+  #skills-searchbar,
+  #search-container,
+  #your-skill-display {
+    width: 100%;
+  }
+
+  #skills-search-results {
+    max-height: 200px;
+    overflow-y: auto;
+  }
+
+  .skill-li {
+    width: 100%;
+    font-size: 14px;
+    padding: 6px;
+  }
+
+  #skills-search-input {
+    font-size: 14px;
+    width: 100%;
+  }
+}
